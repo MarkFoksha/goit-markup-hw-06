@@ -4,16 +4,18 @@
 
 .footer {
   background: #2e2f42;
-  padding: 100px 0;
+  padding: 96px 0;
 }
 
 .footer-container {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+  align-items: center;
+  gap: 72px;
 }
 
 .footer-info {
-  margin-right: 120px;
+  text-align: center;
 }
 
 .footer-logo {
@@ -27,6 +29,8 @@
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
+  text-align: left;
+  margin: 0 auto;
 }
 
 .footer-social-title {
@@ -36,10 +40,12 @@
   letter-spacing: 0.02em;
   color: #ffffff;
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .footer-social-list {
   display: flex;
+  justify-content: center;
   gap: 16px;
 }
 
@@ -71,7 +77,8 @@
 }
 
 .footer-subscribe {
-  margin-left: auto;
+  width: 100%;
+  max-width: 288px;
 }
 
 .footer-subscribe-title {
@@ -81,19 +88,23 @@
   letter-spacing: 0.02em;
   color: #ffffff;
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .footer-form {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 }
 
 .footer-label {
   display: block;
+  width: 100%;
 }
 
 .footer-input {
-  width: 264px;
+  width: 100%;
   height: 40px;
   border: 1px solid #ffffff;
   background-color: transparent;
@@ -144,4 +155,77 @@
 .footer-button-icon {
   margin-left: 16px;
   fill: currentColor;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: flex-start;
+    row-gap: 72px;
+    column-gap: 24px;
+    padding-left: 108px;
+    padding-right: 108px;
+  }
+
+  .footer-info {
+    text-align: left;
+    margin-right: 0;
+  }
+
+  .footer-text {
+    margin: 0;
+  }
+
+  .footer-social-title {
+    text-align: left;
+  }
+
+  .footer-social-list {
+    justify-content: flex-start;
+  }
+
+  .footer-subscribe {
+    width: auto;
+    max-width: none;
+  }
+
+  .footer-subscribe-title {
+    text-align: left;
+  }
+
+  .footer-form {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .footer-label {
+    width: auto;
+  }
+
+  .footer-input {
+    width: 264px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .footer {
+    padding: 100px 0;
+  }
+
+  .footer-container {
+    flex-wrap: nowrap;
+    gap: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .footer-info {
+    margin-right: 120px;
+  }
+
+  .footer-subscribe {
+    margin-left: auto;
+  }
 }

@@ -1,29 +1,28 @@
 .hero {
-  background-color: #2e2f42;
-  background-image:
-    linear-gradient(
-      180deg,
-      rgba(46, 47, 66, 0.7) 0%,
-      rgba(46, 47, 66, 0.7) 100%
-    ),
-    url("../images/hero-bg.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
-  padding: 188px 0;
+  padding: 72px 0;
+  background-color: #2e2f42;
+  background-image:
+    linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+    image-set(
+      url("../images/hero-bg-mobile.jpg") 1x,
+      url("../images/hero-bg-mobile@2x.jpg") 2x
+    );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-title {
-  max-width: 496px;
+  max-width: 216px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 48px;
+  margin-bottom: 72px;
   font-weight: 700;
-  font-size: 56px;
-  line-height: 1.07;
+  font-size: 36px;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   text-align: center;
   color: #ffffff;
@@ -31,6 +30,8 @@
 
 .hero-button {
   display: block;
+  min-width: 169px;
+  height: 56px;
   padding: 16px 32px;
   border-radius: 4px;
   margin-left: auto;
@@ -38,7 +39,9 @@
   background-color: #4d5ae5;
   border: none;
   cursor: pointer;
+  font-family: inherit;
   font-weight: 500;
+  font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: #ffffff;
@@ -49,4 +52,39 @@
 .hero-button:hover,
 .hero-button:focus {
   background-color: #404bbf;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    padding: 112px 0;
+    background-image:
+      linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      image-set(
+        url("../images/hero-bg-tablet.jpg") 1x,
+        url("../images/hero-bg-tablet@2x.jpg") 2x
+      );
+  }
+
+  .hero-title {
+    max-width: 496px;
+    font-size: 56px;
+    line-height: 1.07;
+    margin-bottom: 36px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .hero {
+    padding: 188px 0;
+    background-image:
+      linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      image-set(
+        url("../images/hero-bg.jpg") 1x,
+        url("../images/hero-bg@2x.jpg") 2x
+      );
+  }
+
+  .hero-title {
+    margin-bottom: 48px;
+  }
 }
